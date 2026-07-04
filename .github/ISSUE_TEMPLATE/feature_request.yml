@@ -1,0 +1,24 @@
+name: Feature request
+description: Propose a new gate, rule, or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What should the game be able to do?
+      placeholder: Add a T gate / a 4x4 board / an AI opponent / ...
+    validations:
+      required: true
+  - type: textarea
+    id: physics
+    attributes:
+      label: The quantum story (if applicable)
+      description: >
+        If this adds a gate or mechanic: what does it do to the circuit, and why
+        is it interesting to play with? New moves must be expressible as
+        instructions in the gate log so games stay replayable.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

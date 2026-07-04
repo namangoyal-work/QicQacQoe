@@ -1,0 +1,12 @@
+# Default owners for everything in the repository.
+# These owners are automatically requested for review on every pull request.
+*                   @namangoyal-work
+
+# The quantum backend is the heart of the game: changes here need extra care
+# because the GUI board is only a mirror of what the circuit actually does.
+/qicqacqoe/backend.py   @namangoyal-work
+/qicqacqoe/rules.py     @namangoyal-work
+
+# Governance and security policy changes always go through the maintainer.
+/SECURITY.md        @namangoyal-work
+/.github/           @namangoyal-work

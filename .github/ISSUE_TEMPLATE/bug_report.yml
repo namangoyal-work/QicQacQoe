@@ -1,0 +1,43 @@
+name: Bug report
+description: Something behaves wrongly (in the game, the circuit, or the tooling)
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+      placeholder: I applied CNOT from square 0 to square 4, then measured, and...
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: >
+        Best case: run with `qicqacqoe --seed <N> --log game.json`, reproduce the
+        bug, and paste the seed plus the game.json contents here. That makes the
+        exact sequence of collapses replayable.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Environment
+      description: OS, Python version, and `pip show qiskit qiskit-aer pygame` versions
+      placeholder: macOS 15, Python 3.12, qiskit 2.5.0, qiskit-aer 0.17.2, pygame 2.6.1
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Which layer does it look like?
+      options:
+        - Quantum backend (wrong measurement outcomes, entanglement, teleportation)
+        - Game rules (wins, draws, move cap, locked squares)
+        - GUI (drawing, clicks, buttons)
+        - Packaging / install / CI
+        - Not sure
+    validations:
+      required: true

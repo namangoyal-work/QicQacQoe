@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security report
+    url: https://github.com/namangoyal-work/QicQacQoe/security/advisories/new
+    about: Please report security issues privately, not as public issues (see SECURITY.md).
+  - name: Design questions
+    url: https://github.com/namangoyal-work/QicQacQoe/blob/main/DESIGN_RATIONALE.md
+    about: Wondering why the code is written the way it is? The design rationale defends every decision; if yours is missing there, open an issue.

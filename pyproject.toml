@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qicqacqoe"
+version = "1.0.0"
+description = "Quantum Tic Tac Toe: play gates, entanglement, and teleportation on a 3x3 board of real simulated qubits"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Naman Goyal" }]
+requires-python = ">=3.10"
+keywords = ["quantum", "qiskit", "game", "tic-tac-toe", "pygame"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Education",
+    "Topic :: Games/Entertainment :: Board Games",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "qiskit>=1.0",
+    "qiskit-aer>=0.14",
+    "pygame>=2.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/namangoyal-work/QicQacQoe"
+Issues = "https://github.com/namangoyal-work/QicQacQoe/issues"
+Changelog = "https://github.com/namangoyal-work/QicQacQoe/blob/main/CHANGELOG.md"
+
+[project.scripts]
+qicqacqoe = "qicqacqoe.game:main"
+
+[tool.setuptools]
+packages = ["qicqacqoe"]
+
+[tool.setuptools.package-data]
+qicqacqoe = ["assets/*.png"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
